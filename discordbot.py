@@ -13,6 +13,8 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('成功登入')
+    game = discord.Game('ANO遊戲社群')
+    await client.change_presence(status=discord.Status.online, activity=game)
 
 # 收到訊息時呼叫
 @client.event
